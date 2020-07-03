@@ -12,7 +12,7 @@ bluebird@~3.3.4:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.3.5.tgz#5ee747f1c7bd967658b683936430aee753955a34"
   integrity sha1-XudH8ce9lnZYtoOTZDCu51OVWjQ=
 
-command-line-args@^5.1.1:
+command-line-args@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/command-line-args/-/command-line-args-5.1.1.tgz#88e793e5bb3ceb30754a86863f0401ac92fd369a"
   integrity sha512-hL/eG8lrll1Qy1ezvkant+trihbGnaKaeEjj6Scyr3DN+RC7iQ5Rz84IeLERfAWDGo0HBSNAakczwgCilDXnWg==
@@ -41,7 +41,7 @@ find-replace@^3.0.0:
   dependencies:
     array-back "^3.0.1"
 
-incoming-message-hash@^4.0.0:
+incoming-message-hash@4.0.0, incoming-message-hash@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/incoming-message-hash/-/incoming-message-hash-4.0.0.tgz#6531cbd91601b1e4aa38cdf035e8a6dfcf218e69"
   integrity sha512-IUL106dpz+ervWlf8NRfGB2iLuJv2SwMmn/WYbAwOWW6OdrD/sg5sBYPXU7aLXzTF6ASguykKc4WLT3GdmyT2g==
@@ -73,7 +73,7 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-path@^0.12.7:
+path@0.12.7:
   version "0.12.7"
   resolved "https://registry.yarnpkg.com/path/-/path-0.12.7.tgz#d4dc2a506c4ce2197eb481ebfcd5b36c0140b10f"
   integrity sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=
@@ -98,7 +98,7 @@ util@^0.10.3:
   dependencies:
     inherits "2.0.3"
 
-yakbak@^5.0.0:
+yakbak@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/yakbak/-/yakbak-5.0.0.tgz#f47e3dec41009d9aa3f2146f7d0390e148dae897"
   integrity sha512-KYBVTuH0RzC5cDcfQWYaPm0gFW5Ev8YdCryU/sYPMhIB0fVU/OVjdzWh/FnndQJCf59laPHd8Hve53pByOsoeQ==

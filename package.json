@@ -5,9 +5,9 @@
   "license": "Apache-2.0",
   "bin": "./yakbak-proxy.js",
   "dependencies": {
-    "command-line-args": "^5.1.1",
-    "incoming-message-hash": "^4.0.0",
-    "path": "^0.12.7",
-    "yakbak": "^5.0.0"
+    "command-line-args": "5.1.1",
+    "incoming-message-hash": "4.0.0",
+    "path": "0.12.7",
+    "yakbak": "5.0.0"
   }
 }
