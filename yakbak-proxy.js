@@ -44,17 +44,16 @@ if (options.verbose) {
   console.log(`listening on port ${options.port}, proxying to ${options.server}`);
 }
 
-let seq = 1;
+let counter = 1;
 http.createServer(yakbak(options.server, {
   // Yakbak can't find its own tapes if this is not an absolute path
   dirname: path.resolve(options.tapes),
   noRecord: options.norecord,
   hash: (req, body) => {
-    console.log('seq =', seq);
-    seq++;
+    counter++;
     const extras = {};
     if (options.ignoreheaders) extras.headers = {};
-    if (options.sequence) extras.headers['X-sequence'] = seq;
+    if (options.sequence) extras.headers['X-sequence'] = counter;
     return hash.sync({ ...req, ...extras }, body);
   },
 })).listen(options.port);
