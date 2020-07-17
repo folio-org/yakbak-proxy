@@ -1,9 +1,16 @@
 # Change history for yakbak-proxy
 
+## [1.3.0](https://github.com/folio-org/yakbak-proxy/tree/v1.3.0) (2020-07-17)
+[Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.2.0...v1.3.0)
+
+* Add `--exciseid` (`-x`) command-line option. When enabled, hash signatures for POST requests use a body from which any `id` field has been excised, removing some effects of randomness that defeat hash-matching.
+* Tidy up logging slightly.
+
 ## [1.2.0](https://github.com/folio-org/yakbak-proxy/tree/v1.2.0) (2020-07-15)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.1.0...v1.2.0)
 
-* Add `--sequence` (`-q`) command-line option. WHen enabled, hash signatures contain a sequence number so that repeated requests do not get served the same response. Can be necessary when running tests that write as well as reading.
+* Add `--sequence` (`-q`) command-line option. When enabled, hash signatures contain a sequence number so that repeated identical requests do not get served the same response. Can be necessary when running tests that write as well as reading.
+* When running in `--norecord` mode, no server-address is necessary or allowed.
 
 ## [1.1.0](https://github.com/folio-org/yakbak-proxy/tree/v1.1.0) (2020-07-03)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.0.0...v1.1.0)
