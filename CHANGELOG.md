@@ -1,5 +1,12 @@
 # Change history for yakbak-proxy
 
+## [1.4.0](https://github.com/folio-org/yakbak-proxy/tree/v1.4.0) (2020-07-17)
+[Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.3.0...v1.4.0)
+
+* Remove `--verbose` (`-v`) command-line option in favour of `LOGCAT`.
+* Logging is now done via [categorical-logger](https://github.com/openlibraryenvironment/categorical-logger), configured via the `LOGGING_CATEGORIES` or `LOGCAT` environment variable.
+* Update top-level [README](README.md), including information about logging.
+
 ## [1.3.0](https://github.com/folio-org/yakbak-proxy/tree/v1.3.0) (2020-07-17)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.2.0...v1.3.0)
 

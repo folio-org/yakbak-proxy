@@ -12,6 +12,11 @@ bluebird@~3.3.4:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.3.5.tgz#5ee747f1c7bd967658b683936430aee753955a34"
   integrity sha1-XudH8ce9lnZYtoOTZDCu51OVWjQ=
 
+categorical-logger@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/categorical-logger/-/categorical-logger-1.0.0.tgz#dc93d3f3cc1a281261ab63d5698ddd646ae45cd2"
+  integrity sha512-/7547NN23px6XFVVs+gtpkWZYuy8JlI6O9sy9G37m8qiuMpbn6dGECKb/QEk0UVFmN7S8Ynl0kQadPzs65+G3Q==
+
 command-line-args@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/command-line-args/-/command-line-args-5.1.1.tgz#88e793e5bb3ceb30754a86863f0401ac92fd369a"

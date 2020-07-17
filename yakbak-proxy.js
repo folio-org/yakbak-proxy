@@ -4,12 +4,14 @@
 
 const path = require('path');
 const commandLineArgs = require('command-line-args');
+const Logger = require('categorical-logger');
 const http = require('http');
 const yakbak = require('yakbak');
 const hash = require('incoming-message-hash');
 
+const l = new Logger(process.env.LOGGING_CATEGORIES || process.env.LOGCAT);
+
 const optionDefinitions = [
-  { name: 'verbose', alias: 'v', type: Boolean, defaultValue: false },
   { name: 'norecord', alias: 'n', type: Boolean, defaultValue: false },
   { name: 'ignoreheaders', alias: 'i', type: Boolean, defaultValue: false },
   { name: 'exciseid', alias: 'x', type: Boolean, defaultValue: false },
@@ -26,7 +28,6 @@ try {
   console.error(
     `Could not parse command line: ${e}
 Usage: ${process.argv[1]} [options] <serverUrl>
-        -v|--verbose            Log parameters before starting server
         -n|--norecord           Fail requests that have no tape [default: false]
         -i|--ignoreheaders      Exclude headers from hash function [default: false]
         -x|--exciseid           Excise 'id' fields from POST requests [default: false]
@@ -47,10 +48,8 @@ if (options.norecord && options.server) {
   process.exit(2);
 }
 
-if (options.verbose) {
-  console.log(`listening on port ${options.port},`,
-              options.norecord ? 'not proxying' : `proxying to ${options.server}`);
-}
+l.log('startup', `listening on port ${options.port},`,
+      options.norecord ? 'not proxying' : `proxying to ${options.server}`);
 
 let counters = {};
 http.createServer(yakbak(options.server, {
@@ -69,10 +68,13 @@ http.createServer(yakbak(options.server, {
     }
 
     const digest = hash.sync({ ...req, ...extras }, body);
-    if (!options.sequence) return digest;
+    if (!options.sequence) {
+      l.log('request', digest.substring(0, 8), req.method, req.url);
+      return digest;
+    }
 
     const counter = counters[digest] || 0;
-    console.log(' '.repeat(counter), counter, digest.substring(0, 8), req.method, req.url);
+    l.log('request', ' '.repeat(counter), counter, digest.substring(0, 8), req.method, req.url);
     counters[digest] = counter+1;
     return digest + '-' + counter;
   },
