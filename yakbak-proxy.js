@@ -37,9 +37,7 @@ try {
 if (!options.norecord && !options.server) {
   console.error(`${process.argv[1]}: no server address supplied`);
   process.exit(2);
-}
-
-if (options.norecord && options.server) {
+} else if (options.norecord && options.server) {
   console.error(`${process.argv[1]}: unnecessary server address supplied`);
   process.exit(2);
 }
