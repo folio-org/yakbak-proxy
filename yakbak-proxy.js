@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-/* eslint-disable no-console */
+/* eslint no-console: ["error", { allow: ["error"] }] */
 
 const path = require('path');
 const commandLineArgs = require('command-line-args');
-const commandLineUsage = require('command-line-usage')
+const commandLineUsage = require('command-line-usage');
 const Logger = require('categorical-logger');
 const http = require('http');
 const yakbak = require('yakbak');
@@ -45,14 +45,15 @@ if (options.norecord && options.server) {
 }
 
 l.log('startup', `listening on port ${options.port},`,
-      options.norecord ? 'not proxying' : `proxying to ${options.server}`);
+  options.norecord ? 'not proxying' : `proxying to ${options.server}`);
 
-let counters = {};
+const counters = {};
 http.createServer(yakbak(options.server, {
   // Yakbak can't find its own tapes if this is not an absolute path
   dirname: path.resolve(options.tapes),
   noRecord: options.norecord,
-  hash: (req, body) => {
+  hash: (req, originalBody) => {
+    let body = originalBody;
     const extras = {};
     if (options.ignoreheaders) extras.headers = {};
     if (req.method === 'POST' && options.exciseid) {
@@ -71,7 +72,7 @@ http.createServer(yakbak(options.server, {
 
     const counter = counters[digest] || 0;
     l.log('request', ' '.repeat(counter), counter, digest.substring(0, 8), req.method, req.url);
-    counters[digest] = counter+1;
-    return digest + '-' + counter;
+    counters[digest] = counter + 1;
+    return `${digest}-${counter}`;
   },
 })).listen(options.port);
