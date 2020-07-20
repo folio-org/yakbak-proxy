@@ -1,5 +1,10 @@
 # Change history for yakbak-proxy
 
+## [1.5.0](https://github.com/folio-org/yakbak-proxy/tree/v1.5.0) (IN PROGRESS)
+[Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.4.0...v1.5.0)
+
+* Add support for `yarn lint`, and lint-tidy the script.
+
 ## [1.4.0](https://github.com/folio-org/yakbak-proxy/tree/v1.4.0) (2020-07-17)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.3.0...v1.4.0)
 
