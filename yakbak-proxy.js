@@ -4,6 +4,7 @@
 
 const path = require('path');
 const commandLineArgs = require('command-line-args');
+const commandLineUsage = require('command-line-usage')
 const Logger = require('categorical-logger');
 const http = require('http');
 const yakbak = require('yakbak');
@@ -12,29 +13,24 @@ const hash = require('incoming-message-hash');
 const l = new Logger(process.env.LOGGING_CATEGORIES || process.env.LOGCAT);
 
 const optionDefinitions = [
-  { name: 'norecord', alias: 'n', type: Boolean, defaultValue: false },
-  { name: 'ignoreheaders', alias: 'i', type: Boolean, defaultValue: false },
-  { name: 'exciseid', alias: 'x', type: Boolean, defaultValue: false },
-  { name: 'sequence', alias: 'q', type: Boolean, defaultValue: false },
-  { name: 'port', alias: 'p', type: Number, defaultValue: 3002 },
-  { name: 'tapes', alias: 't', type: String, defaultValue: 'tapes' },
-  { name: 'server', alias: 's', type: String, defaultOption: true },
+  { name: 'norecord', alias: 'n', type: Boolean, defaultValue: false, description: 'Fail requests that have no tape' },
+  { name: 'ignoreheaders', alias: 'i', type: Boolean, defaultValue: false, description: 'Exclude headers from hash function' },
+  { name: 'exciseid', alias: 'x', type: Boolean, defaultValue: false, description: 'Excise "id" fields from POST requests' },
+  { name: 'sequence', alias: 'q', type: Boolean, defaultValue: false, description: 'Include sequence numbers in each request' },
+  { name: 'port', alias: 'p', type: Number, defaultValue: 3002, description: 'Listen on port <num> [default: 3002]' },
+  { name: 'tapes', alias: 't', type: String, defaultValue: 'tapes', description: 'Write tapes to <dir> [default: tapes]' },
+  { name: 'server', alias: 's', type: String, defaultOption: true, description: 'Specify server to proxy for' },
 ];
 
 let options;
 try {
   options = commandLineArgs(optionDefinitions);
 } catch (e) {
-  console.error(
-    `Could not parse command line: ${e}
-Usage: ${process.argv[1]} [options] <serverUrl>
-        -n|--norecord           Fail requests that have no tape [default: false]
-        -i|--ignoreheaders      Exclude headers from hash function [default: false]
-        -x|--exciseid           Excise 'id' fields from POST requests [default: false]
-        -q|--sequence           Include sequence numbers in each request [default: false]
-        -p|--port <num>         Listen on port <num> [default: 3002]
-        -t|--tapes <dir>        Write tapes to <dir> [default: tapes]`
-  );
+  console.error(`Could not parse command line: ${e}`);
+  console.error(commandLineUsage({
+    header: `Usage: ${process.argv[1].replace(/.*\//, '')} [options] <serverUrl>`,
+    optionList: optionDefinitions,
+  }));
   process.exit(1);
 }
 
