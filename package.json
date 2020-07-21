@@ -1,14 +1,23 @@
 {
   "name": "yakbak-proxy",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Yakbak proxy for reading/writing tapes of network interactions",
   "license": "Apache-2.0",
   "bin": "./yakbak-proxy.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "dependencies": {
     "categorical-logger": "^1.0.0",
     "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.0",
     "incoming-message-hash": "^4.0.0",
     "path": "^0.12.7",
     "yakbak": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
   }
 }

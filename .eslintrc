@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-airbnb-base",
+  "ignorePatterns": ["tapes"],
+  "rules": {
+    "object-curly-newline": ["error", { "consistent": true }]
+  }
+}

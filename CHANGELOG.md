@@ -1,5 +1,12 @@
 # Change history for yakbak-proxy
 
+## [1.5.0](https://github.com/folio-org/yakbak-proxy/tree/v1.5.0) (2020-07-20)
+[Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.4.0...v1.5.0)
+
+* Smarter assignment of sequence numbers to repeated operations, now incrementing only after a write operation (i.e., a POST, PUT or DELETE that is not to a `login` URL). This reduces the number of tapes needed or a typical test-suite by about half.
+* Remove `--sequence` option, which is now effectively always true: the new smarter sequencing algorithm generates the same tapes as would be generated in non-`--sequence` mode when there are no POST, PUT or DELETEs, and that is the only circumstance under which things would work right without that mode anyway.
+* Add support for `yarn lint`, and lint-tidy the script.
+
 ## [1.4.0](https://github.com/folio-org/yakbak-proxy/tree/v1.4.0) (2020-07-17)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.3.0...v1.4.0)
 
