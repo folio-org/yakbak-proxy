@@ -1,6 +1,6 @@
 {
   "name": "yakbak-proxy",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Yakbak proxy for reading/writing tapes of network interactions",
   "license": "Apache-2.0",
   "bin": "./yakbak-proxy.js",
