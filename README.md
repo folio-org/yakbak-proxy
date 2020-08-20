@@ -31,7 +31,7 @@ Logging is done using [categorical-logger](https://github.com/openlibraryenviron
 
 ## Example
 
-	LOGCAT=startup yakbak-proxy.js -i -t yakbak/tapes https://folio-snapshot-okapi.aws.indexdata.com
+	LOGCAT=startup yakbak-proxy.js -i -t yakbak/tapes https://folio-snapshot-okapi.dev.folio.org
 
 This runs the proxy, logging a single line when starting up, ignoring headers for the purposes of distinguishing requests, storing tapes in (and reading tapes from) `yakbak/tapes` and proxying the FOLIO Snapshot OKAPI web-service. The proxy listens on the default port 3002.
 
