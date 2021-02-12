@@ -52,7 +52,10 @@ http.createServer(yakbak(options.server, {
   dirname: path.resolve(options.tapes),
   noRecord: options.norecord,
   hash: (req, originalBody) => {
-    const extras = {};
+    const extras = {
+      trailers: {}
+    };
+    
     if (options.ignoreheaders) extras.headers = {};
     let body = originalBody;
     if (req.method === 'POST' && options.exciseid) {
