@@ -1,5 +1,10 @@
 # Change history for yakbak-proxy
 
+## [1.6.0](https://github.com/folio-org/yakbak-proxy/tree/v1.6.0) (2021-02-12)
+[Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.5.0...v1.6.0)
+
+* Specify a default `trailers` entry in request. This avoids an error in `incoming-message-hash` when no trailers are defined. Thanks to @doytch.
+
 ## [1.5.0](https://github.com/folio-org/yakbak-proxy/tree/v1.5.0) (2020-07-20)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.4.0...v1.5.0)
 
