@@ -190,7 +190,7 @@ callsites@^3.0.0:
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
-categorical-logger@^1.0.0:
+categorical-logger@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/categorical-logger/-/categorical-logger-1.0.0.tgz#dc93d3f3cc1a281261ab63d5698ddd646ae45cd2"
   integrity sha512-/7547NN23px6XFVVs+gtpkWZYuy8JlI6O9sy9G37m8qiuMpbn6dGECKb/QEk0UVFmN7S8Ynl0kQadPzs65+G3Q==
@@ -236,7 +236,7 @@ color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-command-line-args@^5.1.1:
+command-line-args@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/command-line-args/-/command-line-args-5.1.1.tgz#88e793e5bb3ceb30754a86863f0401ac92fd369a"
   integrity sha512-hL/eG8lrll1Qy1ezvkant+trihbGnaKaeEjj6Scyr3DN+RC7iQ5Rz84IeLERfAWDGo0HBSNAakczwgCilDXnWg==
@@ -420,7 +420,7 @@ eslint-module-utils@^2.6.0:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
-eslint-plugin-import@^2.22.0:
+eslint-plugin-import@2.22.0:
   version "2.22.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.22.0.tgz#92f7736fe1fde3e2de77623c838dd992ff5ffb7e"
   integrity sha512-66Fpf1Ln6aIS5Gr/55ts19eUuoDhAbZgnr6UxK5hbDx6l/QgQgx61AePq+BV4PP2uXQFClgMVzep5zZ94qqsxg==
@@ -719,7 +719,7 @@ imurmurhash@^0.1.4:
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
 
-incoming-message-hash@^4.0.0:
+incoming-message-hash@4.0.0, incoming-message-hash@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/incoming-message-hash/-/incoming-message-hash-4.0.0.tgz#6531cbd91601b1e4aa38cdf035e8a6dfcf218e69"
   integrity sha512-IUL106dpz+ervWlf8NRfGB2iLuJv2SwMmn/WYbAwOWW6OdrD/sg5sBYPXU7aLXzTF6ASguykKc4WLT3GdmyT2g==
@@ -1056,7 +1056,7 @@ path-type@^2.0.0:
   dependencies:
     pify "^2.0.0"
 
-path@^0.12.7:
+path@0.12.7:
   version "0.12.7"
   resolved "https://registry.yarnpkg.com/path/-/path-0.12.7.tgz#d4dc2a506c4ce2197eb481ebfcd5b36c0140b10f"
   integrity sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=
@@ -1381,7 +1381,7 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
-yakbak@^5.0.0:
+yakbak@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/yakbak/-/yakbak-5.0.0.tgz#f47e3dec41009d9aa3f2146f7d0390e148dae897"
   integrity sha512-KYBVTuH0RzC5cDcfQWYaPm0gFW5Ev8YdCryU/sYPMhIB0fVU/OVjdzWh/FnndQJCf59laPHd8Hve53pByOsoeQ==
