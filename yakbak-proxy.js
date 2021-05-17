@@ -53,9 +53,9 @@ http.createServer(yakbak(options.server, {
   noRecord: options.norecord,
   hash: (req, originalBody) => {
     const extras = {
-      trailers: {}
+      trailers: {},
     };
-    
+
     if (options.ignoreheaders) extras.headers = {};
     let body = originalBody;
     if (req.method === 'POST' && options.exciseid) {
