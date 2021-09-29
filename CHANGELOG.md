@@ -1,5 +1,10 @@
 # Change history for yakbak-proxy
 
+## [1.7.0](https://github.com/folio-org/yakbak-proxy/tree/v1.7.0) (IN PROGRESS)
+[Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.6.0...v1.7.0)
+
+* Add new `requestfull` logging category, like `request` except that it does not trucate the tape name. This is useful when you need to know the name of a tape that's missing so you can create it manually.
+
 ## [1.6.0](https://github.com/folio-org/yakbak-proxy/tree/v1.6.0) (2021-02-12)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.5.0...v1.6.0)
 

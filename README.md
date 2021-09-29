@@ -28,6 +28,7 @@ Logging is done using [categorical-logger](https://github.com/openlibraryenviron
 
 * `startup` -- log a single message at startup stating the listening port and the proxied site.
 * `request` -- log each request, stating the tape filename (truncated to eight character), the method and the path.
+* `requestfull` -- log each request, stating the full tape filename, the method and the path.
 
 ## Example
 

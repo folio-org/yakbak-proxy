@@ -81,6 +81,7 @@ http.createServer(yakbak(options.server, {
       counters[digest] = counter;
     }
     l.log('request', ' '.repeat(counter), counter, digest.substring(0, 8), req.method, req.url);
+    l.log('fullrequest', ' '.repeat(counter), counter, digest, req.method, req.url);
     return `${digest}-${counter}`;
   },
 })).listen(options.port);
