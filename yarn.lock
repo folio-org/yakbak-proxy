@@ -746,6 +746,11 @@ incoming-message-hash@^4.0.0:
   resolved "https://registry.yarnpkg.com/incoming-message-hash/-/incoming-message-hash-4.0.0.tgz#6531cbd91601b1e4aa38cdf035e8a6dfcf218e69"
   integrity sha512-IUL106dpz+ervWlf8NRfGB2iLuJv2SwMmn/WYbAwOWW6OdrD/sg5sBYPXU7aLXzTF6ASguykKc4WLT3GdmyT2g==
 
+incoming-message-hash@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/incoming-message-hash/-/incoming-message-hash-5.0.0.tgz#7eba7dca4789fd30342d13cddac9d9f7f624ca8d"
+  integrity sha512-dwE5WvFwV73/N2y0mIqG4TNNsga0uBFu8PK1kEb6KLDqaxoapiBLMeDGJiEBPsVnKHb/x1P5EPCswCk/z2flww==
+
 inflight@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
