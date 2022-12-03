@@ -13,7 +13,7 @@
     "command-line-usage": "6.1.1",
     "incoming-message-hash": "^5.0.0",
     "path": "^0.12.7",
-    "yakbak": "^5.0.0"
+    "yakbak": "^5.0.1"
   },
   "devDependencies": {
     "eslint": "7.32.0",
