@@ -1,5 +1,9 @@
 # Change history for yakbak-proxy
 
+## 1.8.0 (IN PROGRESS)
+
+* Upgrade `yakbak` from 5.0.0 to 5.0.1. This indirectly upgrades ejs from 2.7.4 to 3.1.8 fixing Remote Code Execution (RCE) and Arbitrary Code Injection https://app.snyk.io/vuln/SNYK-JS-EJS-2803307 and https://app.snyk.io/vuln/SNYK-JS-EJS-1049328 . Fixes STRIPES-835.
+
 ## [1.7.0](https://github.com/folio-org/yakbak-proxy/tree/v1.7.0) (2021-09-29)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.6.0...v1.7.0)
 
