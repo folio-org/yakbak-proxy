@@ -3,6 +3,7 @@
 ## 1.8.0 (IN PROGRESS)
 
 * Upgrade `yakbak` from 5.0.0 to 5.0.1. This indirectly upgrades ejs from 2.7.4 to 3.1.8 fixing Remote Code Execution (RCE) and Arbitrary Code Injection https://app.snyk.io/vuln/SNYK-JS-EJS-2803307 and https://app.snyk.io/vuln/SNYK-JS-EJS-1049328 . Fixes STRIPES-835.
+* Rebuild `yarn.lock`. The rebuild upgrades `brace-expansion` from 1.1.11 to 1.1.12, and 2.0.1 to 2.0.2; this fixes CVE-2025-5889 denial of service. The rebuild upgrades `@75lb/deep-merge` from 1.1.1 to 1.1.2, this fixes CVE-2024-38986 arbitrary code execution and system crash.
 
 ## [1.7.0](https://github.com/folio-org/yakbak-proxy/tree/v1.7.0) (2021-09-29)
 [Full Changelog](https://github.com/folio-org/yakbak-proxy/compare/v1.6.0...v1.7.0)
